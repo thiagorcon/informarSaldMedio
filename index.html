@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="">
+        <!-- <input type="text" id="emprestimo"> Digite o valor do empréstimo -->
+        <br><br>
+        <input type="text" id="saldo"> Digite o valor do saldo
+        <br>
+        <button onclick="calcula();return false;">Calcular</button>
+        <br>
+        <input type="reset" value="limpar formulario"></input>
+        <br>
+        <br>
+
+        <div id="resposta"></div>
+
+    </form>
+
+    
+
+</body>
+
+</html>
+
+<script>
+    function calcula() {
+        let saldoMedio = parseInt(document.getElementById("saldo").value);
+        // let valorEmprestimo = parseInt(document.getElementById("emprestimo").value);
+        
+        if (saldoMedio >= 0 && saldoMedio <= 500) {
+            let respostaSite = "Nenhum crédito";
+            // alert(respostaSite);
+            resposta.innerHTML = respostaSite;
+        }
+        else if (saldoMedio >= 501 && saldoMedio <= 1000) {
+            let calculo = (saldoMedio * 30) / 100;
+            let respostaSite = "seu empréstimo será " + calculo;
+            // alert("seu empréstimo será " + calculo);
+            resposta.innerHTML = respostaSite;
+        }
+        else if (saldoMedio >= 1001 && saldoMedio <= 3000) {
+                let calculo = (saldoMedio * 40) / 100;
+                let respostaSite = "seu empréstimo será " + calculo;
+                // alert("seu empréstimo será " + calculo);
+                resposta.innerHTML = respostaSite;
+        } else if (saldoMedio >= 3001) {
+                let calculo = (saldoMedio * 50) / 100;
+                let respostaSite = "seu empréstimo será " + calculo;
+                // alert("seu empréstimo será " + calculo);
+                resposta.innerHTML = respostaSite;
+        } else {
+                // alert("Vá a uma agencia bancária");
+                let respostaSite = "Nenhum crédito";
+                resposta.innerHTML = respostaSite;
+        } 
+
+        }      
+
+
+
+</script>
